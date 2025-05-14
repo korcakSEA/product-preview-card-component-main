@@ -26,7 +26,7 @@
     --font-Fraunces: "Fraunces", serif;
 
     /** Font Sizes **/
-    --font-size-xs:0.75rem;
+    --font-size-xs:0.8rem;
     --font-size-sm:1rem;
     --font-size-md:1.5rem;
     --font-size-lg:2rem;    
@@ -75,18 +75,43 @@ span{
 .card-wrapper{
     background-color: var(--White);
     width: 90%;
-    max-width: 40rem;
+    max-width: 24rem;
     border-radius: var(--radius-200);
+
+    @media (min-width:62rem) {
+        display: flex;
+        max-width: 40rem;
+    }
 }
 
-picture img{
-    display: block;
+.card-image{
     width: 100%;
+    
+    @media (min-width:62rem){
+        width: 50%;
+    }
+}
+
+.product-image{
+    display: block;
+    max-width: 100%;
     border-radius: var(--radius-200) var(--radius-200) 0 0;
+
+    @media (min-width:62rem){
+        border-radius: var(--radius-200)  0  0 var(--radius-200); 
+    }
+
 }
 
 .card-content{
     padding: var(--space-300);
+
+     @media (min-width:62rem){
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
 
 .category{
@@ -111,6 +136,7 @@ picture img{
 }
 
 
+
 .price{
     margin-bottom: var(--space-200);
     display: flex;
@@ -128,13 +154,16 @@ picture img{
 .old-price{
     font-family: var(--font-Montserrat);
     font-weight: var(--font-weight-500);
-    font-size: 0.9rem;
+    font-size: var(--font-size-xs);
     color: var(--Grey);
     text-decoration: line-through;
 }
 
 .btn{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:var(--space-150);
     width: 100%;
     border-radius: var(--radius-100);
     border: none;
