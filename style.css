@@ -77,37 +77,24 @@ span{
     width: 90%;
     max-width: 24rem;
     border-radius: var(--radius-200);
+    overflow: hidden;
 
     @media (min-width:62rem) {
-        display: flex;
         max-width: 40rem;
-    }
-}
-
-.card-image{
-    width: 100%;
-    
-    @media (min-width:62rem){
-        width: 50%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
 .product-image{
     display: block;
-    max-width: 100%;
-    border-radius: var(--radius-200) var(--radius-200) 0 0;
-
-    @media (min-width:62rem){
-        border-radius: var(--radius-200)  0  0 var(--radius-200); 
-    }
-
+    max-width: 100%; 
 }
 
 .card-content{
     padding: var(--space-300);
 
     @media (min-width:62rem){
-        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
